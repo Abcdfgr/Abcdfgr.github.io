@@ -1,0 +1,22 @@
+.menu{
+    width: 80%;
+    margin-left: 10%;
+    height: 70px ;
+    background: url(https://images.wallpaperscraft.ru/image/single/fon_nebo_tochki_83482_300x168.jpg);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu_button{
+    width: 9%;
+    height: 70px;
+    background: linear-gradient(to left,rgb(0, 255, 0) 50%, rgb(0, 0, 255, 0) 50%);
+    background-size: 200% 100%;
+    transition: all 0.3s  linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.menu_button:hover{
+background-position: -100% 20%;
+}

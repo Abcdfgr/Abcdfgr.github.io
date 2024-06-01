@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/admine_page.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="menu">
+        <button onclick="show('add_tovar')" class="btn btn-info btn-sm">Додати товари</button>
+    </div>
+    <div class="add_tovar" id="add_tovar">
+        <div class="form">
+            <h3 align="center">Додаваня <button onclick="hide('add_tovar')" class="btn btn-danger">X</button></h3>
+            <label for="">Назва товару</label><br>
+            <input type="text" class="tovaru_info" id="name_tovary"><br><br>
+
+            <label for="">фото товару</label><br>
+            <input type="text" class="tovaru_info" id="foto_tovary"><br><br>
+
+            <label for="">Ціна товару</label><br>
+            <input type="number" class="tovaru_info" id="price_tovary"><br><br>
+
+            <label for="">Опис товару</label><br>
+            <input type="text" class="tovaru_info" id="opus_tovary"><br><br>
+
+            <label for="">Память товару</label><br>
+            <input type="number" class="tovaru_info" id="kilkist_rozymy_tovary"><br><br>
+
+            <label for="">Гарантія товару</label><br>
+            <input type="number" class="tovaru_info" id="garantia_tovary"><br><br>
+            
+            <label for="">Виробник</label><br>
+            <select name="" id="vurobnuk">
+                <option value=""></option>
+                <option value="iphone">iphone</option>
+                <option value="redmi">redmi</option>
+                <option value="samsung">samsung</option>
+                <option value="poco">poco</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Motorola">Motorola</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="LG">LG</option>
+                <option value="Xiaomi">Xiaomi</option>
+            </select><br>
+            <label for="">Країна виробника</label><br>
+            <select name="" id="kraina">
+                <option value=""></option>
+                <option value="Україна">ukrane</option>
+                <option value="Америка">usa</option>
+                <option value="Канада">canada</option>
+                <option value="Китай">China</option>
+                <option value="Германія">Germani</option>
+            </select><br>
+            <label for="">Тип товару</label><br>
+            <select name="" id="type">
+                <option value=""></option>
+                <option value="telefon">телефон</option>
+                <option value="laptop">ноутбук</option>
+                <option value="planshe">планшет</option>
+            </select><br>
+            <label for="">Кольор</label><br>
+            <select name="" id="color">
+                <option value=""></option>
+                <option value="red">червоний</option>
+                <option value="black">чорний</option>
+                <option value="light">білий</option>
+                <option value="grey">сірий</option>
+            </select>
+
+            <button onclick="add_Tovar()" class="btn btn-success">Додати товари</button>
+            <button onclick="hide('add_tovar')" class="btn btn-danger">Закрити</button>
+
+        </div>
+    </div>
+    <div class="add_tovar" id="edit_tovar">
+        <div class="form">
+            <h3 align="center" id="h3">Редагуваня  <button onclick="hide('edit_tovar')" class="btn btn-danger">X</button></h3>
+            <label for="">Назва товару</label><br>
+            <input type="text" class="tovaru_info" id="name_tovary_edit"><br><br>
+
+            <label for="">фото товару</label><br>
+            <input type="text" class="tovaru_info" id="foto_tovary_edit"><br><br>
+
+            <label for="">Ціна товару</label><br>
+            <input type="number" class="tovaru_info" id="price_tovary_edit"><br><br>
+
+            <label for="">Опис товару</label><br>
+            <input type="text" class="tovaru_info" id="opus_tovary_edit"><br><br>
+
+            <label for="">Память товару</label><br>
+            <input type="number" class="tovaru_info" id="kilkist_rozymy_tovary_edit"><br><br>
+
+            <label for="">Гарантія товару</label><br>
+            <input type="number" class="tovaru_info" id="garantia_tovary_edit"><br><br>
+            
+            <label for="">Виробник</label><br>
+            <select name="" id="vurobnuk_edit">
+                <option value=""></option>
+                <option value="iphone">iphone</option>
+                <option value="redmi">redmi</option>
+                <option value="samsung">samsung</option>
+                <option value="poco">poco</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Motorola">Motorola</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="LG">LG</option>
+                <option value="Xiaomi">Xiaomi</option>
+            </select><br>
+            <label for="">Країна виробника</label><br>
+            <select name="" id="kraina_edit">
+                <option value=""></option>
+                <option value="Америка">usa</option>
+                <option value="Китай">China</option>
+                <option value="Германія">Germani</option>
+            </select><br>
+            <label for="">Тип товару</label><br>
+            <select name="" id="type_edit">
+                <option value=""></option>
+                <option value="telefon">телефон</option>
+                <option value="laptop">ноутбук</option>
+                <option value="planshe">планшет</option>
+            </select><br>
+            <label for="">Кольор</label><br>
+            <select name="" id="color_edit">
+                <option value=""></option>
+                <option value="red">червоний</option>
+                <option value="black">чорний</option>
+                <option value="light">білий</option>
+                <option value="grey">сірий</option>
+            </select>
+
+            <button id="zbereti" class="btn btn-success" onclick="hide('edit_tovar')">Зберегти зміни</button>
+            <button onclick="hide('edit_tovar')" class="btn btn-danger">Закрити</button>
+        </div> </div>
+    <div class="tovars">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="red">#</th>
+                    <th class="red">Назва</th>
+                    <th class="red" id="foto">Фото</th>
+                    <th class="red">виробник</th>
+                    <th class="red">тип</th>
+                    <th class="red">кольор</th>
+                    <th class="red">ціна</th>
+                    <th class="red">опис</th>
+                    <th class="red">пам'ять</th>
+                    <th class="red">виробник Країна</th>
+                    <th class="red">гарнатія</th>
+                    <th class="red">редагуваня товару</th>
+                    <th class="red">Видаленя товару</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>       
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="../firebase/config.js"></script>
+    <script src="../scripts/admin_page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="menu">
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="">Home</a>
+            <a href="">Servise</a>
+            <a href="">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+    <div class="filter" id="filter">
+        <label for="назва товару"> Назва</label><br>
+        <input type="text" id="filter_name" placeholder="Наберіть для пошуку..."><br><br>
+
+        <div class="my-2">
+            <label class="form-label">Виробник</label>
+            <input id="developer" class="form-control" list="datalistOptions" placeholder="Виберіть для пошуку...">
+            <datalist id="datalistOptions">
+                <option value="iphone">iphone</option>
+                <option value="redmi">redmi</option>
+                <option value="samsung">samsung</option>
+                <option value="poco">poco</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Motorola">Motorola</option>
+                <option value="OnePlus">OnePlus</option>
+                <option value="LG">LG</option>
+                <option value="Xiaomi">Xiaomi</option>
+            </datalist>
+        </div>
+        
+        <label for="">Тип товару</label><br>
+            <select name="" id="type">
+                <option value=""></option>
+                <option value="telefon">телефон</option>
+                <option value="laptop">ноутбук</option>
+                <option value="planshe">планшет</option>
+            </select><br><br>
+
+            <div class="wrapper">
+                <div class="values">
+                    <h5>Ціна</h5>
+                    <span id="range1">
+                        0
+                    </span>
+                    <span> &dash; </span>
+                    <span id="range2">
+                        100
+                    </span>
+                </div>
+            <div class="container">
+                <div class="slider-track"></div>
+                    <input type="range" min="0" max="250" value="0" id="slider-1" oninput="slideOne()">
+                    <input type="range" min="0" max="250" value="250" id="slider-2" oninput="slideTwo()">
+                </div>
+            </div>
+    
+
+        <label for="">Память товару</label><br>
+            <input type="number" id="filter_pamat" class="tovaru_info"><br><br>
+
+        <label for="">Кольор</label><br>
+            <select name="" id="filter_color">
+                <option value=""></option>
+                <option value="red">червоний</option>
+                <option value="black">чорний</option>
+                <option value="light">білий</option>
+                <option value="grey">сірий</option>
+            </select>
+            <button type="button" class="btn btn-warning" onclick="clearFilter()">Скинути Фільтр</button>
+            <button type="button" class="btn btn-primary" onclick="save_Filter()">Застосувати Фільтр</button>
+
+    </div>
+    </div>
+    <div class="tovars" id="all_tovars">
+            <div class="first">
+                <div class="img"><img class="kartinka" src="https://content.rozetka.com.ua/goods/images/big_tile/254557738.jpg" alt=""></div>
+                <div class="name" ><h5 align="center">Компьютер ARTLINE Gaming X55WHITEv39</h5></div>
+                <div class="opus">Intel Core i5-12400F (2.5 - 4.4 ГГц) / RAM 16 ГБ / HDD 2 ТБ + SSD 480 ГБ / nVidia GeForce RTX 3060, 12 ГБ / без ОД / LAN / без ОС</div>
+                <div class="butons">
+                    <div class="price" ><h5 >36 999₴</h5></div>
+                    <div class="coshuk"><img class="kosuk" src="shopping_cart.svg" alt=""></div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-auth.js"></script>
+    <script src="firebase/config.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
